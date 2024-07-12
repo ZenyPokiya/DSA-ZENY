@@ -18,11 +18,11 @@ return -1;
 };
 int main(){
 int arr[8]={12,23,34,45,56,67,78,89};
-int result=search(arr,0,7,43);
+int result=search(arr,0,7,45);
 if(result==-1){
 printf("Result not found");
 }else{
-    printf("result is:%d",result);
+    printf("Element of mid is:%d",result);
 }
 return 0;
 }
