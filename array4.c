@@ -20,6 +20,7 @@ int main(){
         printf("Sum of odd position elements is :%d\t",oddtotal);
      }
     }
-    printf("\nSum of all elements is:%d\t",eventotal);
+    printf("\nSum of even elements is:%d\t",eventotal);
+    printf("\nSum of odd elements is:%d\t",eventotal);
 return 0;
 }
