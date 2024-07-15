@@ -15,12 +15,28 @@ void enque(int x,int n, int queue[]){
     }
 }
 
-void dequeue(int n,int queue[]){
+void dequeue(int queue[]){
+ if(front==-1 && rear==-1){
+       printf("Overflow");
+}else if(front==rear){
+    front=rear=-1;
+}else{
+    printf("%d\n",queue[front]);
+    front++;
+}
+}
+void display(int queue[]){
     if(front==-1 && rear==-1){
-        printf("Overflow");
-    }else if(front==rear){
-        front=rear=-1;
+        printf("Data not found");
     }else{
-        front=(front+1)%n;
+        for(int i=front;i<rear+1;i++){
+            printf("%d\t",queue[i]);
+        }
+        printf("\n");
     }
+}
+
+int main(){
+    int size=6;
+    int queue[n];
 }
