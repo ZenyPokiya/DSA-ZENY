@@ -1,42 +1,63 @@
 #include<stdio.h>
+#include<stdlib.h>
+#define size 5
 int front=-1;
 int rear=-1;
-
+int queue[size];
          
-void enque(int x,int n, int queue[]){
-    if((rear+1)%n=front){
-        printf("Overflow");
-    }else if(front==-1 && rear==-1){
+void enque(int x){
+    if(front==-1 && rear==-1){
         front=rear=0;
         queue[rear]=x;
+     }else if((rear+1)%size==front){
+        printf("Overflow");
+     
     }else {
-        rear=(rear+1)%n;
+        rear=(rear+1)%size;
         queue[rear]=x;
     }
 }
 
-void dequeue(int queue[]){
+void deque(){
  if(front==-1 && rear==-1){
-       printf("Overflow");
+       printf("Queue is empty");
 }else if(front==rear){
+    printf("\nThe dequeued element is %d",queue[front]);
     front=rear=-1;
 }else{
-    printf("%d\n",queue[front]);
-    front++;
+    printf("\nThe dequeued element is %d",queue[front]);
+    front=(front+1)%size;
 }
-}
-void display(int queue[]){
-    if(front==-1 && rear==-1){
-        printf("Data not found");
-    }else{
-        for(int i=front;i<rear+1;i++){
-            printf("%d\t",queue[i]);
-        }
-        printf("\n");
-    }
 }
 
+
+void display()  
+{  
+    int i=front;  
+    if(front==-1 && rear==-1)  
+    {  
+        printf("\n Queue is empty..");  
+    }  
+    else  
+    {  
+        printf("\nElements in a Queue are :");  
+        while(i<=rear)  
+        {  
+            printf("%d,", queue[i]);  
+            i=(i+1)%size;  
+        }  
+    }  
+}  
+
 int main(){
-    int size=6;
+    int n=5;
     int queue[n];
+    enque(10);
+    enque(20);
+    enque(-1);
+    enque(30);
+    display();
+    deque();
+    display();
+    return 0;
 }
