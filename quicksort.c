@@ -1,4 +1,4 @@
-#include<stdio.h>
+` #include<stdio.h>
 #include<stdlib.h>
 int partition(int a[],int lb,int ub){
     int pivot=a[lb];
