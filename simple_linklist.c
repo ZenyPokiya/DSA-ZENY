@@ -81,8 +81,6 @@ void delete_mid(int pos){
     free(ptr);
 }
 
-
-
 void display(){
     struct node*ptr=head;
     if(head==NULL){
