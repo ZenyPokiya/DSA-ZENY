@@ -34,7 +34,7 @@ void insert_rear(int x){
 
 void display(){
     int i=front;
-    printf("Elements in dequee are:");
+    printf("Elements in queue are:");
      while(i!=rear)    
     {    
         printf("%d\t",deque[i]);    
