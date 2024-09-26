@@ -19,9 +19,9 @@ int main()
     b.ptr = NULL;
 
     printf("Data of a is: \n%d\t%c",a.data, a.ch);
-    printf("\n\nData of b is: \n%d\t%c",b.data, b.ch);
+    printf("\nData of b is: \n%d\t%c",b.data, b.ch);
 
     // a.ptr = &b;
     // b.ptr = &a;
-    // printf("Data of b is: \n%d\t%c",a.ptr->data, a.ptr->ch);
+    // printf("\nData of b is: \n%d\t%c",a.ptr->data, a.ptr->ch);
 }
